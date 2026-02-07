@@ -1,0 +1,353 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Parental Synergy | Vidya Vihar International School</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@600;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      :root {
+        --primary-bg: #a1105d;
+        --accent-gold: #ffcc00;
+        --text-white: #ffffff;
+        --text-dark: #333333;
+        --bg-light: #f9f9f9;
+        --font-heading: "Poppins", sans-serif;
+        --font-body: "Inter", sans-serif;
+        --transition: all 0.3s ease;
+        --container-max: 1100px;
+        --shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+      }
+
+      /* Base Resets */
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      html {
+        scroll-behavior: smooth;
+      }
+
+      body {
+        font-family: var(--font-body);
+        color: var(--text-dark);
+        line-height: 1.8;
+        background-color: var(--text-white);
+        overflow-x: hidden;
+      }
+
+      /* Hero Section */
+      .hero {
+        position: relative;
+        height: 45vh;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        color: var(--text-white);
+        overflow: hidden;
+      }
+
+      .hero img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        z-index: 1;
+      }
+
+      .hero-overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(rgba(161, 16, 93, 0.6), rgba(0, 0, 0, 0.7));
+        z-index: 2;
+      }
+
+      .hero-content {
+        position: relative;
+        z-index: 3;
+        padding: 0 20px;
+      }
+
+      .hero-content h1 {
+        font-family: var(--font-heading);
+        font-size: 2.2rem;
+        margin-bottom: 10px;
+        text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
+      }
+
+      .hero-content p {
+        font-size: 1rem;
+        font-weight: 500;
+        max-width: 600px;
+        margin: 0 auto;
+        opacity: 0.9;
+      }
+
+      .hero-accent {
+        width: 80px;
+        height: 4px;
+        background-color: var(--accent-gold);
+        margin: 15px auto 0;
+        border-radius: 2px;
+      }
+
+      /* Main Content Container */
+      .main-container {
+        padding: 60px 20px;
+        max-width: var(--container-max);
+        margin: 0 auto;
+      }
+
+      .section-intro {
+        text-align: center;
+        margin-bottom: 60px;
+      }
+
+      .section-intro h2 {
+        font-family: var(--font-heading);
+        font-size: 2rem;
+        color: var(--primary-bg);
+        margin-bottom: 10px;
+      }
+
+      .gold-underline {
+        width: 60px;
+        height: 4px;
+        background-color: var(--accent-gold);
+        margin: 0 auto;
+        border-radius: 2px;
+      }
+
+      /* Content Block Styles - Mobile First */
+      .content-block {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+        margin-bottom: 80px;
+        align-items: center;
+      }
+
+      .block-image {
+        width: 100%;
+        border-radius: 15px;
+        overflow: hidden;
+        box-shadow: var(--shadow);
+      }
+
+      .block-image img {
+        width: 100%;
+        height: auto;
+        display: block;
+        transition: transform 0.5s ease;
+      }
+
+      .block-image:hover img {
+        transform: scale(1.03);
+      }
+
+      .block-text {
+        width: 100%;
+      }
+
+      .block-text h3 {
+        font-family: var(--font-heading);
+        color: var(--primary-bg);
+        font-size: 1.4rem;
+        margin-bottom: 15px;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+      }
+
+      .block-text p {
+        text-align: justify;
+        font-size: 1rem;
+        color: #555;
+      }
+
+      /* Tablet & Desktop Adjustments */
+      @media (min-width: 768px) {
+        .hero {
+          height: 55vh;
+        }
+        .hero-content h1 {
+          font-size: 3.2rem;
+        }
+        .section-intro h2 {
+          font-size: 2.5rem;
+        }
+
+        .content-block {
+          flex-direction: row;
+          gap: 50px;
+          text-align: left;
+        }
+
+        .block-image,
+        .block-text {
+          flex: 1;
+        }
+
+        /* Alternating Layout for Desktop */
+        .content-block:nth-child(even) {
+          flex-direction: row-reverse;
+        }
+
+        .block-text h3 {
+          font-size: 1.6rem;
+        }
+      }
+
+      @media (min-width: 1024px) {
+        .main-container {
+          padding: 100px 20px;
+        }
+        .content-block {
+          gap: 80px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Hero Section -->
+    <header class="hero">
+      <img
+        src="https://images.unsplash.com/photo-1543269865-cbf427effbad?auto=format&fit=crop&q=80&w=1920"
+        alt="Parents and Teachers collaborating"
+      />
+      <div class="hero-overlay"></div>
+      <div class="hero-content">
+        <h1>Parental Synergy</h1>
+        <p>Partnering for Every Child’s Growth</p>
+        <div class="hero-accent"></div>
+      </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main-container">
+      <div class="section-intro">
+        <h2>Parental Synergy</h2>
+        <div class="gold-underline"></div>
+      </div>
+
+      <!-- Block 1: Parent-Teacher Partnership -->
+      <section class="content-block">
+        <div class="block-image">
+          <img
+            src="https://images.unsplash.com/photo-1524178232363-1fb2b075b655?auto=format&fit=crop&q=80&w=800"
+            alt="Parent and teacher interaction in a classroom"
+          />
+        </div>
+        <div class="block-text">
+          <h3>Parent-Teacher Partnership</h3>
+          <p>
+            At Vidya Vihar International School, we firmly believe that a strong
+            partnership between parents and teachers is essential for the
+            holistic development of our students. Our commitment to fostering a
+            culture of open communication, mutual respect, and active
+            involvement creates a supportive and enriching learning environment
+            where every child can thrive. Parents are encouraged to actively
+            participate in their child’s educational journey through meaningful
+            activities such as reading together, assisting with homework,
+            discussing school events, attending school functions, and
+            volunteering in classrooms. We deeply value the insights and input
+            of families, recognizing that a strong community is vital for
+            nurturing students’ growth and success.
+          </p>
+        </div>
+      </section>
+
+      <!-- Block 2: Communication & Engagement -->
+      <section class="content-block">
+        <div class="block-image">
+          <img
+            src="https://images.unsplash.com/photo-1577896851231-70ef18881754?auto=format&fit=crop&q=80&w=800"
+            alt="Parents attending a school meeting"
+          />
+        </div>
+        <div class="block-text">
+          <h3>Communication & Engagement</h3>
+          <p>
+            To facilitate open communication and collaboration, Vidya Vihar
+            International School provides multiple opportunities for regular
+            interaction between parents and teachers. Frequent parent-teacher
+            meetings and structured feedback mechanisms empower parents to share
+            their thoughts and concerns. Parents can meet class teachers and
+            subject teachers on the Second Saturday of every month, enabling
+            meaningful discussions about each child’s strengths, challenges,
+            learning preferences, developmental milestones, and areas for
+            growth. These interactions ensure that parents remain well-informed
+            and actively involved in their child’s educational progress.
+          </p>
+        </div>
+      </section>
+
+      <!-- Block 3: Shared Vision & Digital Connect -->
+      <section class="content-block">
+        <div class="block-image">
+          <img
+            src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&q=80&w=800"
+            alt="A family using a mobile app to check school updates"
+          />
+        </div>
+        <div class="block-text">
+          <h3>Shared Vision & Digital Connect</h3>
+          <p>
+            Regular Parent-Teacher Meetings (PTMs), led by the Principal for
+            each grade, further strengthen this partnership by addressing
+            academic goals, co-curricular activities, innovative programs, and
+            the importance of parental involvement. To enhance communication and
+            engagement, Vidya Vihar International School has developed a
+            dedicated mobile app that provides access to announcements,
+            notifications, event calendars, academic resources, and
+            extracurricular updates. Through strong collaboration between
+            families and the school, we strive to create a stable, encouraging
+            learning environment that supports academic excellence, personal
+            growth, and lifelong success for every child.
+          </p>
+        </div>
+      </section>
+    </main>
+
+    <script>
+      // Smooth reveal animation on scroll
+      const blocks = document.querySelectorAll(".content-block");
+
+      const observerOptions = {
+        threshold: 0.1,
+        rootMargin: "0px 0px -50px 0px",
+      };
+
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.style.opacity = "1";
+            entry.target.style.transform = "translateY(0)";
+            observer.unobserve(entry.target);
+          }
+        });
+      }, observerOptions);
+
+      blocks.forEach((block) => {
+        block.style.opacity = "0";
+        block.style.transform = "translateY(30px)";
+        block.style.transition = "all 0.8s ease-out";
+        observer.observe(block);
+      });
+    </script>
+  </body>
+</html>
